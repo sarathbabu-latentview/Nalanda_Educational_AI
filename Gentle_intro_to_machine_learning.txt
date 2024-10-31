@@ -1,0 +1,273 @@
+# A Gentle Introduction to Machine Learning
+
+00:00:00.000 gonna start this tech quest with silly
+00:00:03.300 song but if you don't like silly songs
+00:00:07.370 that's okay
+00:00:10.260 stack quests hello I'm Josh stormer and
+00:00:15.120 welcome to stack quest today we're going
+00:00:17.490 to do a gentle introduction to machine
+00:00:19.650 learning note this stack quest was
+00:00:23.250 originally prepared for and presented at
+00:00:25.590 the Society for scientific advancements
+00:00:27.840 annual conference one of the things that
+00:00:31.019 Sosa does is promote science and
+00:00:33.149 technology in Jamaica let's start with a
+00:00:37.260 silly example do you like silly songs if
+00:00:41.420 you like silly songs are you interested
+00:00:44.430 in machine learning if you like silly
+00:00:47.460 songs and machine learning then you'll
+00:00:50.070 love stack quest
+00:00:52.590 if you like silly songs but not machine
+00:00:55.350 learning are you interested in
+00:00:56.970 statistics if you like silly songs and
+00:01:00.450 statistics but not machine learning then
+00:01:03.630 you'll still love stack quest otherwise
+00:01:07.170 you might not like stack quest won't
+00:01:09.810 Wang if you don't like silly songs are
+00:01:14.100 you interested in machine learning if
+00:01:16.890 you don't like silly songs but you like
+00:01:19.380 machine learning then you'll love stack
+00:01:21.869 quest if you don't like silly songs or
+00:01:25.860 machine learning are you interested in
+00:01:28.140 statistics if you don't like silly songs
+00:01:31.560 or machine learning but you're
+00:01:33.450 interested in statistics then you will
+00:01:35.490 love stack quest otherwise you might not
+00:01:39.780 like stack quest wah wah this is a silly
+00:01:44.910 example but it illustrates a decision
+00:01:47.310 tree a simple machine learning method
+00:01:49.910 the purpose of this particular decision
+00:01:52.830 tree is to predict whether or not
+00:01:54.899 someone will love stack quest
+00:01:57.740 alternatively we could say that this
+00:02:00.330 decision tree classifies a person as
+00:02:02.789 either someone who loves stack quest or
+00:02:05.310 someone who doesn't since decision trees
+00:02:09.119 are a type of machine learning then if
+00:02:11.819 you understand how we use this tree to
+00:02:14.220 predict or classify if someone would
+00:02:16.650 love stack quest you are well on your
+00:02:18.780 way to understanding machine learning
+00:02:21.620 BAM
+00:02:24.450 here's another silly example of machine
+00:02:26.849 learning
+00:02:27.890 imagine we measured how quickly someone
+00:02:30.209 could run 100 meters and how much yam
+00:02:33.840 they ate this is me I'm not very fast
+00:02:38.670 and I don't eat much yam these are some
+00:02:42.390 other people
+00:02:44.790 and this is Shane bolt hold is very fast
+00:02:49.590 Andy eats a lot of yam given this
+00:02:53.219 pretend data we see that the more yam
+00:02:55.799 someone eats the faster they run the
+00:02:58.049 100-meter dash
+00:03:00.610 we can fit a black line to the data to
+00:03:03.520 show the trend but we can also use the
+00:03:06.760 black line to make predictions for
+00:03:10.330 example if someone told us they ate this
+00:03:12.790 much yam then we could use the black
+00:03:15.970 line to predict how fast that person
+00:03:18.160 might run
+00:03:20.100 this is the predicted speed
+00:03:22.970 the black line is a type of machine
+00:03:25.310 learning because we can use it to make
+00:03:27.380 predictions
+00:03:29.300 in general machine learning is all about
+00:03:32.000 making predictions and classifications
+00:03:34.960 BAM
+00:03:37.819 now that we can make predictions and
+00:03:39.890 classifications let's talk about some of
+00:03:42.530 the main ideas in machine learning
+00:03:44.859 first of all in machine learning lingo
+00:03:48.079 the original data is called training
+00:03:50.450 data so the black line is fit to
+00:03:53.749 training data alternatively we could
+00:03:57.950 have fit a green squiggle to the
+00:03:59.359 training data the green squiggle fits
+00:04:02.480 the training data better than the black
+00:04:04.310 line but remember the goal of machine
+00:04:07.069 learning is to make predictions so we
+00:04:09.889 need a way to decide if the green
+00:04:11.750 squiggle is better or worse than the
+00:04:14.030 black line at making predictions so we
+00:04:18.168 find a new person and measure how fast
+00:04:20.418 they run and how much ham they eat and
+00:04:22.639 then we find another and another and
+00:04:26.560 another altogether the blue dots
+00:04:30.860 represent testing data we use the
+00:04:34.190 testing data to compare the predictions
+00:04:36.259 made by the black line to the
+00:04:38.870 predictions made by the green squiggle
+00:04:41.650 let's start by seeing how well the black
+00:04:44.449 line predicts the speed of each person
+00:04:46.520 in the testing data
+00:04:48.770 here's the first person in the testing
+00:04:51.139 data they ate this much yam and they ran
+00:04:55.849 this fast
+00:04:57.580 however the black line predicts that
+00:05:00.440 someone who ate this much yam should run
+00:05:03.289 a little slower
+00:05:05.289 so let's measure the distance between
+00:05:07.270 the actual speed and the predicted speed
+00:05:10.210 and save the distance on the right while
+00:05:13.809 we focus on the other people in the
+00:05:15.580 testing data
+00:05:17.420 here's the second person in the testing
+00:05:19.760 data they ate this much yam and they ran
+00:05:23.780 this fast but the black line predicts
+00:05:27.230 that they will run a little faster
+00:05:30.100 so we measure the distance between the
+00:05:32.380 actual speed and the predicted speed and
+00:05:35.190 add it to the one we measured for the
+00:05:37.630 first person in the testing data
+00:05:40.860 then we measure the distance between the
+00:05:43.199 real and the predicted speed for the
+00:05:45.419 third person in the testing data and add
+00:05:48.810 it to our running total of distances
+00:05:50.669 between the real and predicted speeds
+00:05:52.770 for the black line
+00:05:55.529 then we do the same thing for the fourth
+00:05:57.779 person in the testing data
+00:06:00.790 and add that distance to our running
+00:06:03.100 total for the black line this is the sum
+00:06:06.730 of all the distances between the real
+00:06:08.830 and predicted speeds for the black line
+00:06:12.520 now let's calculate the distances
+00:06:14.830 between the real and predicted speeds
+00:06:16.750 using the green squiggle remember the
+00:06:20.770 green squiggle did a great job fitting
+00:06:22.960 the training data but when we are doing
+00:06:25.840 machine learning we are more interested
+00:06:28.120 in how well the green squiggle can make
+00:06:30.039 predictions with new data
+00:06:33.160 so just like before we determine this
+00:06:36.640 person's real speed and their predicted
+00:06:39.850 speed and measure the distance between
+00:06:42.550 them
+00:06:44.720 and just like we did for the black line
+00:06:46.550 we'll keep track of the distances for
+00:06:49.010 the green squiggle over here
+00:06:52.050 then we do the same thing for the second
+00:06:54.599 person in the testing data
+00:06:57.449 and the third person
+00:07:00.139 and the fourth person
+00:07:03.080 this is the sum of the distances between
+00:07:05.389 the real and predicted speeds for the
+00:07:07.939 green squiggle the sum of the distances
+00:07:11.599 is larger for the green squiggle than
+00:07:14.000 the black line in other words even
+00:07:17.629 though the green squiggle fit the
+00:07:19.310 training data way better than the black
+00:07:21.199 line the black line did a better job
+00:07:24.139 predicting speeds with the testing data
+00:07:27.790 so if we had to choose between using the
+00:07:30.310 black line or the green squiggle to make
+00:07:32.650 predictions we would choose the black
+00:07:35.500 line BAM
+00:07:39.610 this example teaches two main ideas
+00:07:42.159 about machine learning first we use
+00:07:45.759 testing data to evaluate machine
+00:07:47.860 learning methods second don't be fooled
+00:07:51.639 by how well a machine learning method
+00:07:53.650 fits the training data note fitting the
+00:07:57.849 training data well but making poor
+00:07:59.979 predictions is called the bias-variance
+00:08:01.930 tradeoff Ohno a shameless self-promotion
+00:08:06.969 if you want to learn more about the
+00:08:10.449 bias-variance tradeoff there's a stat
+00:08:12.789 quest that will walk you through it one
+00:08:14.770 step at a time
+00:08:16.259 before we move on you may be wondering
+00:08:19.270 why we used a simple black line in a
+00:08:21.460 silly green squiggle instead of a deep
+00:08:24.400 learning or convolutional neural network
+00:08:27.580 or insert sir who is with bestest most
+00:08:32.409 fancy machine learning method here here
+00:08:36.169 there are tons of fancy sounding machine
+00:08:38.539 learning methods and each year something
+00:08:41.809 new and exciting comes on the scene but
+00:08:45.139 regardless of what you use the most
+00:08:47.329 important thing isn't how fancy it is
+00:08:49.370 but how it performs with testing data
+00:08:53.019 double BAM
+00:08:55.970 now let's go back to the decision tree
+00:08:58.610 that we started with remember we wanted
+00:09:02.389 to classify if someone loved stat quest
+00:09:04.730 based on a few questions to create the
+00:09:08.810 decision tree we collected data from
+00:09:11.089 people who loved stat quest and from
+00:09:14.300 people who did not love stat quest
+00:09:17.079 altogether this was the training data
+00:09:21.260 and we used it to build the decision
+00:09:23.570 tree
+00:09:26.160 got data from a few more people who love
+00:09:28.170 stat quest and a few more people who did
+00:09:31.740 not love stat quest altogether this
+00:09:35.699 forms the testing data
+00:09:38.579 we can use the testing data to see how
+00:09:41.129 well our decision tree predicts if
+00:09:43.230 someone will love stat quest the first
+00:09:46.649 person in the testing data did not like
+00:09:49.079 silly songs so we go to the right side
+00:09:52.350 of the decision tree they didn't like
+00:09:55.649 machine learning either so we just keep
+00:09:58.949 on going down the right side of the
+00:10:00.869 decision tree
+00:10:02.800 they didn't like statistics either so
+00:10:06.610 the decision tree predicts that this
+00:10:08.470 person will not love stat quest however
+00:10:12.310 this person loves stat quest so the
+00:10:15.399 decision tree made a mistake want wall
+00:10:19.380 the second person in the testing data
+00:10:22.029 liked silly songs and that takes us down
+00:10:25.930 the left side of the decision tree they
+00:10:29.829 were also interested in machine learning
+00:10:32.700 so we predict that that person loves
+00:10:35.800 stat quest and since this person
+00:10:39.160 actually loves stat quest the decision
+00:10:42.070 tree did a good job hooray
+00:10:45.779 now we just run all of the other people
+00:10:48.790 in the testing data down the decision
+00:10:50.950 tree and compare the predictions to
+00:10:53.230 reality then we can compare this
+00:10:56.260 decision tree to the latest greatest
+00:10:58.690 machine learning method ultimately we
+00:11:02.709 pick the method that does the best job
+00:11:04.480 predicting if someone will love stat
+00:11:06.579 quest or not
+00:11:08.800 triple bam in summary machine learning
+00:11:14.830 is all about making predictions and
+00:11:17.160 classifications there are tons of fancy
+00:11:20.800 machine learning methods but the most
+00:11:22.930 important thing to know about them isn't
+00:11:25.149 what makes them so fancy it's that we
+00:11:28.120 decide which method fits our needs the
+00:11:30.190 best by using testing data one last
+00:11:34.269 thing before we go you may be wondering
+00:11:37.630 how we decide which data go into the
+00:11:39.640 training set and which data go into the
+00:11:42.040 testing set earlier we just arbitrarily
+00:11:46.360 decided that these red dots were the
+00:11:48.519 training data
+00:11:50.670 but the blue dots could have just as
+00:11:53.100 easily been the training data
+00:11:56.030 the good news is that there are ways to
+00:11:58.340 determine which samples should be used
+00:12:00.560 for training data and which samples
+00:12:02.720 should be used for testing data
+00:12:05.209 and if you're interested in learning
+00:12:06.980 more about this check out the stat quest
+00:12:09.379 and there are lots more stat quests that
+00:12:12.829 walk you through machine learning
+00:12:14.480 concepts step-by-step so check them out
+00:12:18.880 hooray we've made it to the end of
+00:12:21.790 another exciting stack quest if you like
+00:12:24.490 this stack quest and want to see more
+00:12:25.870 please subscribe and if you want to
+00:12:28.450 support stack quest well consider buying
+00:12:31.060 one or two of my original songs or
+00:12:33.100 getting a t-shirt or a hoodie or some
+00:12:35.740 other slick merchandise there's links on
+00:12:38.170 the screen and there's links in the
+00:12:39.850 description below alright until next
+00:12:42.550 time quest on
